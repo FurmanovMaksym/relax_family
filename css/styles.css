@@ -1,0 +1,991 @@
+@font-face {
+    font-family: 'QueenSerif';
+    src: url('../font/queenserif-free.otf');
+}
+
+
+* {
+    margin: 0;
+}
+
+html {
+    display: table;
+    scroll-behavior: smooth;
+    margin: auto;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+main {
+    max-width: 65rem;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 6.825rem min(2.125rem) 0;
+}
+
+a, a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: QueenSerif, serif;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 6.5rem;
+}
+
+h2 {
+    font-size: 4.125rem;
+}
+
+h3 {
+    font-size: 3.125rem;
+}
+
+h4 {
+    font-size: 2.0625rem;
+}
+
+h5 {
+    font-size: 1.375rem;
+    margin: 0 0 1.25rem 0;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.78125rem;
+    margin: 0.625rem 0;
+}
+
+p {
+    text-align: justify;
+}
+
+.changing {
+    display: none;
+}
+
+main h1 {
+    text-align: center;
+}
+
+article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 3;
+}
+
+#header-id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 6rem 0.3rem 7rem;
+}
+
+.sticky h3 {
+    font-size: 2.5rem;
+}
+
+.sticky svg {
+    max-width: 13.75rem;
+    margin: -0.875rem 0 0 -1.5rem;
+}
+
+header figure {
+    display: flex;
+    flex-direction: column;
+}
+
+header h3 {
+    transition: font-size 0.5s;
+}
+
+header svg {
+    max-width: 18.75rem;
+    z-index: 2;
+    margin: -1rem 0 0 -2rem;
+    transition: max-width 0.5s, margin 0.5s;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: -1.25rem;
+}
+
+header nav p {
+    padding-left: 0.625rem;
+    width: max-content;
+    transition: margin-left 0.3s;
+}
+
+.active {
+    border-radius: 25px;
+    border: solid 1px black;
+    padding: 0.3125rem 1.25rem;
+    margin-left: 0.625rem;
+}
+
+.about {
+    padding: 0 min(10vw, 6.125rem);
+    line-height: 1.3;
+    margin: 0 0 2.1875rem;
+}
+
+.column, .row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    flex-direction: column;
+    margin-left: 0.8125rem;
+}
+
+.row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.advantages {
+    gap: 1.25rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.advantages img {
+    margin-bottom: 2.125rem;
+}
+
+.advantages svg {
+    padding-top: 1.5625rem;
+    min-width: 2.5rem;
+}
+
+.advantages p {
+    font-size: 0.8em;
+    line-height: 1.3;
+}
+
+.advantages > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 21.25rem;
+    max-width: 15.3125rem;
+    justify-content: space-between;
+}
+
+.popular-dishes h5 {
+    font-size: 2.0625rem;
+    text-align: center;
+    margin: 5rem 0 2.5625rem 0;
+    font-weight: normal;
+}
+
+.popular-dishes picture, .popular-dishes img {
+    max-height: 30.125em;
+    width: 38em;
+}
+
+.popular-dishes div svg {
+    position: relative;
+}
+
+.popular-dishes p {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.honeydew {
+    margin-bottom: 8.75rem;
+    align-items: flex-end;
+}
+
+.honeydew figure {
+    margin: 0 0 3.8125rem 2.75rem;
+}
+
+.honeydew p {
+    padding: 0 1em;
+}
+
+.honeydew figure svg {
+    width: 0.6875em;
+    top: 0.5em;
+    left: 0.5em;
+    max-height: 1.25em;
+}
+
+.honeydew picture svg, .cheesecake picture svg {
+    z-index: -1;
+    position: relative;
+    width: 18.0625rem;
+    height: fit-content;
+}
+
+.honeydew picture svg {
+    bottom: 31em;
+    left: 20.7em;
+}
+
+.honeydew div {
+    padding-left: 1.1875rem;
+}
+
+.cheesecake {
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.cheesecake figure {
+    width: fit-content;
+    text-align: right;
+    margin: 1.25rem 0 2.925rem 0;
+}
+
+.cheesecake figure svg {
+    width: 0.875em;
+    top: 1.1em;
+    right: 2.9em;
+    max-height: 0.625em;
+}
+
+.cheesecake picture svg {
+    bottom: 31.2em;
+    right: 0.75em;
+}
+
+.cheesecake div {
+    padding-right: 2.5625rem;
+}
+
+.to-menu-button {
+    background-color: #DFD6A7;
+    width: 13.125rem;
+    margin: auto;
+    padding: 0.625rem 0;
+    border: 1px solid;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.38);
+}
+
+.to-menu-button p {
+    text-align: center;
+    font-size: 0.9765rem;
+}
+
+.gallery figure {
+    margin: 4.125rem 0 0.625rem 11.25rem;
+    width: fit-content;
+}
+
+.gallery figure svg {
+    position: relative;
+    z-index: 2;
+    max-height: 1rem;
+    width: 1.125rem;
+    left: 12.1rem;
+    top: 1.7rem;
+}
+
+.gallery article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.9375rem;
+}
+
+.wrapper {
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+}
+
+#left-arrow, #right-arrow {
+    width: 4.375rem;
+}
+
+#left-arrow {
+    visibility: hidden;
+}
+
+.carousel {
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    margin: 1.25rem;
+    display: flex;
+    gap: 14px;
+}
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    max-height: 50rem;
+    width: 32%;
+    object-fit: cover;
+}
+
+.carousel img:first-child {
+    margin-left: 0;
+}
+
+.adress {
+    align-items: center;
+    margin-bottom: 3.9375rem;
+    justify-content: flex-start;
+}
+
+.adress article {
+    justify-content: flex-start;
+}
+
+.adress svg {
+    width: 3.0625rem;
+}
+
+.adress p {
+    margin: 0 0 0 1.4375rem;
+    font-size: 1.25rem;
+}
+
+.adress span {
+    font-size: 1rem;
+}
+
+.contacts {
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts article {
+    flex-direction: column;
+}
+
+.contacts p {
+    font-size: 1.16875rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.show {
+    display: inline;
+}
+
+#tel_num {
+    display: none;
+    position: relative;
+    font-size: 0.8rem !important;
+    bottom: 7.2rem;
+    right: 5rem;
+    border: black 1px solid;
+    border-radius: 25px;
+    padding: 0.4rem;
+    margin: -1rem;
+    background: #DFD6A7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.38);
+    transition: all 0.2s linear;
+}
+
+#tel_num_svg {
+    cursor: pointer;
+}
+
+.contacts svg {
+    width: 3.1875rem;
+    margin: 0.53125rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+footer svg {
+    width: 7.0625rem;
+    margin-left: -8.125rem;
+}
+
+footer h3 {
+    margin: 0 0 0 1rem;
+}
+
+.menu article {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.menu h4 {
+    margin-bottom: 1.3125rem;
+}
+
+.menu p {
+    font-size: 1.171875rem;
+    line-height: 1.15;
+}
+
+.menu span {
+    font-size: 0.625rem;
+    line-height: 2;
+}
+
+.pizza-salads-burgers, .pita-other, .waffles {
+    gap: 2rem;
+}
+
+.pizza-salads-burgers svg, .menu svg {
+    width: 16.4375rem;
+    margin: 1.375rem 0 1.375rem -1.25rem;
+}
+
+.pizza-salads-burgers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 4.0625rem;
+}
+
+.pizza-salads-burgers aside, .pizza-salads-burgers article {
+    width: 22.5625rem;
+}
+
+.pita-other {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pancakes {
+    max-width: 35rem;
+    margin-bottom: 3.5rem;
+}
+
+.waffles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.waffles picture {
+    width: 11.5rem;
+    margin-bottom: -8rem;
+}
+
+.waffles img {
+    width: 11.5rem;
+    min-height: 10.375rem;
+}
+
+.waffles svg {
+    position: relative;
+    z-index: -1;
+    width: 9.7656rem;
+    right: 0.625rem;
+    bottom: 15.8rem;
+    margin: 0 0 -8.5rem 0;
+}
+
+.menu .central-divider {
+    align-items: center;
+}
+
+.drinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.drinks article {
+    margin-right: 5.625rem;
+}
+
+.drinks picture, .drinks img {
+    width: 17.5rem;
+}
+
+.drinks picture {
+    margin-top: 1.875rem;
+    height: 10.1rem;
+}
+
+.drinks picture svg {
+    position: relative;
+    z-index: -1;
+    width: 7.4375rem;
+    left: 11.875rem;
+    bottom: 15.4rem;
+}
+
+.cold-drinks {
+    margin: 3rem 0;
+    max-width: 25rem;
+}
+
+.ice-cream {
+    margin-bottom: 6rem;
+}
+
+.ice-cream picture {
+    height: 25rem;
+    width: min-content;
+}
+
+.ice-cream picture img {
+    width: 23.75rem;
+}
+
+.ice-cream picture svg {
+    position: relative;
+    z-index: -1;
+    width: 12.75rem;
+    bottom: 9rem;
+    left: 12.25rem;
+    height: min-content;
+    margin: 0;
+}
+
+
+.deserts img {
+    width: 13.6875rem;
+    min-height: 13.6875rem;
+}
+
+.deserts svg {
+    position: relative;
+    z-index: -1;
+    width: 9rem;
+    height: 8.3125rem;
+}
+
+.deserts svg {
+    margin: 0 0 0 -9em;
+}
+
+.deserts-pictures picture {
+    position: relative;
+}
+
+.deserts-pictures div {
+    display: block;
+}
+
+.desert-1 {
+    bottom: 17rem;
+}
+
+.desert-2 {
+    bottom: 11rem;
+}
+
+.desert-3 {
+    bottom:12rem;
+}
+
+.desert-4 {
+    bottom: 7rem;
+}
+
+.desert-1 img {
+    margin-right: 2.79375em;
+}
+
+.desert-1 svg {
+    top: 0.8125em;
+    right: 2.2em;
+}
+
+.desert-2 svg {
+    top: 0.8em;
+    right: 5.625em;
+}
+
+.desert-3 img {
+    margin-right: 2.79375em;
+}
+
+.desert-3 svg {
+    right: 8.6em;
+    top: 0.8em;
+}
+
+.desert-4 svg {
+    top: 0.7em;
+    right: 5.625em;
+}
+
+.deserts article {
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.deserts h4 {
+    text-align: right;
+}
+
+.deserts p {
+    text-align: end;
+    white-space: nowrap;
+}
+
+.deserts h5 {
+    font-size: 1.5625rem;
+    text-align: center;
+    margin: 4rem 2rem 2rem;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 1100px) {
+    .header-id {
+        padding: 0.7rem 4rem 0.3rem 4rem;
+    }
+
+    .popular-dishes picture, .popular-dishes img {
+        max-height: 25.125em;
+        width: 30em;
+    }
+
+    .honeydew picture svg {
+        bottom: 26.2em;
+        left: 12.7em;
+    }
+
+    .honeydew figure {
+        margin: 0 0 0.8125rem 2.75rem;
+    }
+
+    .cheesecake picture svg {
+        bottom: 26.2em;
+    }
+
+    .cheesecake figure {
+        margin: 1.25rem 0 1.925rem 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .deserts img {
+        width: 8.9rem;
+        min-height: 8.9rem;
+    }
+
+    .desert-1 svg {
+        right: 2.4em;
+    }
+
+    .desert-2 svg {
+        right: 0.8em;
+    }
+
+    .desert-3 svg {
+        right: 3.6em;
+    }
+
+    .desert-4 svg {
+        right: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    header svg {
+        max-width: 15.75rem;
+    }
+
+    #header-id {
+        padding-left: 3.6rem;
+    }
+
+    .sticky svg {
+        max-width: 11.75rem;
+        margin: -0.8rem 0 0 -1.5rem;
+    }
+
+    .advantages {
+        gap: 2.7rem;
+    }
+
+    .advantages p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .honeydew, .cheesecake {
+        align-items: center;
+    }
+
+    .honeydew div {
+        margin-top: 1.5em;
+    }
+
+    .honeydew figure {
+        margin-bottom: 1em;
+        margin-left: 0;
+    }
+
+    .honeydew picture svg {
+        bottom: 26.2em;
+        left: 12.7em;
+    }
+
+    .honeydew {
+        flex-direction: column;
+    }
+
+    .honeydew p {
+        padding: 0;
+    }
+
+    .cheesecake {
+        flex-direction: column-reverse;
+    }
+
+    .cheesecake figure {
+        margin-bottom: 1em;
+    }
+
+    .cheesecake picture svg {
+        bottom: 26.2em;
+    }
+
+    .carousel img {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .def {
+        display: none;
+    }
+
+    .changing {
+        display: block;
+        margin-bottom: -1rem;
+    }
+
+    #header-id {
+        padding: 0.9rem 6rem 0.3rem 3rem;
+    }
+
+    header nav {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 3.3rem;
+    }
+
+    header svg {
+        max-width: 14.75rem;
+        margin: -1rem 0 0 -1.6rem;
+    }
+
+    .sticky h3 {
+        font-size: 2.8rem;
+    }
+
+    .sticky svg {
+        max-width: 12.75rem;
+        margin: -0.9rem 0 0 -1.4rem;
+    }
+
+    .advantages {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .advantages > div {
+        max-width: 24.3125rem;
+    }
+
+    .advantages svg {
+        display: none;
+    }
+
+    .advantages img {
+        margin-bottom: 1.125rem;
+    }
+
+    h6 {
+        font-size: 1.15rem;
+    }
+
+    .column {
+        margin: auto 0;
+    }
+
+    .popular-dishes img, .popular-dishes picture, .popular-dishes picture svg {
+        height: 23em;
+        width: 25em;
+    }
+
+    .honeydew, .cheesecake {
+        align-items: center;
+    }
+
+    .honeydew {
+        flex-direction: column;
+        margin-bottom: 4.75rem;
+    }
+
+    .honeydew div {
+        margin-top: 1.5em;
+    }
+
+    .honeydew picture svg {
+        bottom: 24.9em;
+        left: 0.9rem;
+    }
+
+    .cheesecake {
+        flex-direction: column-reverse;
+    }
+
+    .cheesecake figure {
+        margin-bottom: 1em;
+    }
+
+    .cheesecake picture svg {
+        bottom: 24.8em;
+    }
+
+    .gallery figure {
+        margin: 4.125rem 0 0.625rem 4.25rem;
+    }
+
+    .carousel img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #left-arrow, #right-arrow {
+        visibility: hidden;
+    }
+
+    .menu article, .menu section {
+        flex-direction: column;
+    }
+
+    .central-divider svg {
+        margin: 1.375rem 0 2.375rem -1.25rem;
+    }
+
+    .waffles {
+        gap: 2rem;
+    }
+
+    .waffles svg {
+        bottom: 15.8rem;
+    }
+
+    .drinks {
+        gap: 2rem;
+    }
+
+    .drinks picture svg {
+        bottom: 15.5rem;
+    }
+    
+    .ice-cream h4 {
+        margin-bottom: 6.3125rem;
+    }
+
+
+    .ice-cream picture {
+        height: 24rem;
+        margin-top: -4rem;
+    }
+
+    .ice-cream picture svg {
+        top: -9.3125rem;
+        right: -12rem;
+    }
+
+    .deserts article {
+        flex-direction: row;
+    }
+
+    .desert-2 {
+        display: none;
+    }
+
+    .desert-3 {
+        display: none;
+    }
+
+    footer svg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 469px) {
+    .desert-1 svg {
+        right: -9.7rem;
+        top: -7.7rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    header nav {
+        display: none;
+    }
+
+    .advantages > div {
+        max-width: 17.3125rem;
+    }
+
+    .popular-dishes img, .popular-dishes picture, .popular-dishes picture svg {
+        height: 15em;
+        width: 16em;
+    }
+
+    .honeydew picture svg {
+        bottom: 16.7em;
+    }
+
+    .cheesecake picture svg {
+        bottom: 16.8em;
+    }
+
+    .adress {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .adress p {
+        margin: 0;
+        text-align: center;
+    }
+}
